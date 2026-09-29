@@ -81,6 +81,7 @@ British-Airways-Data-Science-Job-Simulation/
 │   ├── customer_booking.csv
 │   └── readme.md
 ├── british airways certification.pdf
+├── british airways certification.png    # exported image of the certificate, for inline README display
 └── README.md                          # this file — top-level project overview
 ```
 
@@ -164,15 +165,39 @@ jupyter notebook "BA task-2 predicting customer buying behaviour/BA_Task2_Predic
 
 ## 📈 Visualization
 
-Generated during the Task 2 notebook run:
+**Task 2 summary infographic:** [`BA_Task2_PredictingCustomerBuyingBehaviour.pdf`](<BA task-2 predicting customer buying behaviour/BA_Task2_PredictingCustomerBuyingBehaviour.pdf>) — a one-page results summary exported from the notebook, containing:
 
-- 📊 **Booking completion bar chart** — class imbalance (15% completed vs. 85% not completed)
-- 📉 **ROC-AUC & Recall across CV folds** — grouped bar chart comparing all 5 folds
-- 🧩 **Confusion matrix** — final predictions at threshold 0.20
-- 📶 **Top 15 feature importances** — horizontal bar chart from the fitted Random Forest
-- 🎚️ **Precision/Recall vs. threshold table** — trade-off across thresholds 0.10 to 0.50
+- 📊 **Model performance snapshot** — ROC-AUC 79.02% (5-fold CV), Recall 68.18%, Precision 32.58%, vs. a 15.00% baseline positive rate
+- 📶 **Top predictive variables** (feature importance, Random Forest):
 
-*(Add your actual exported chart images here once saved to a `results/` folder, e.g. `![Confusion Matrix](results/confusion_matrix.png)` — happy to wire these in with real filenames, same as the other projects.)*
+  | Rank | Feature | Rank | Feature |
+  |---|---|---|---|
+  | 1 | Route | 8 | Number of passengers |
+  | 2 | Purchase lead | 9 | Total extras |
+  | 3 | Flight hour | 10 | Early morning flight |
+  | 4 | Length of stay | 11 | Booked within 30 days |
+  | 5 | Booking origin | 12 | Weekend flight |
+  | 6 | Flight day | 13 | In-flight meals |
+  | 7 | Flight duration | 14 | Preferred seat / Extra baggage |
+
+- 🧩 Confusion matrix and CV-fold comparison charts (generated in the notebook)
+
+**Business recommendations (from the infographic):**
+1. **Target customers at the right time** — bookings within 30 days convert at 16.45% vs. 14.18% otherwise; retarget customers past the 30-day mark
+2. **Use ancillary interest as an engagement signal** — booking rate rises from 10.67% (no extras selected) to 18.60% (all three extras selected)
+3. **Personalise campaigns by market and route** — route and booking origin are top-5 predictive features, suggesting market/route-specific campaigns over a single global message
+
+*(If you export the individual charts as images into a `results/` folder, I can embed them directly the same way as the other two projects — for now this links to the full PDF summary.)*
+
+---
+
+## 🎓 Certification
+
+<div align="center">
+<img src="british airways certification.png" alt="British Airways Data Science Job Simulation — Certificate of Completion" width="600"/>
+
+📄 [`british_airways_certification.pdf`](./british_airways_certification.pdf) — Forage Certificate of Completion, issued August 19th, 2026
+</div>
 
 ---
 
@@ -202,5 +227,5 @@ Generated during the Task 2 notebook run:
 ---
 
 <div align="center">
-Completed as part of the British Airways Data Science Job Simulation on Forage · Author: Ankit Kumar Jha
+Completed as part of the British Airways Data Science Job Simulation on Forage
 </div>
