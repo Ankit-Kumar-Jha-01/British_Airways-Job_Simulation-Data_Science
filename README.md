@@ -42,6 +42,8 @@ This is a two-task project completed as part of the **British Airways Data Scien
 | Task 1 | Lounge eligibility lookup table (Excel) | 8 flight groups (haul × time of day), Tier 3 eligibility ranging **10.3%–17.3%** |
 | Task 2 | Booking-completion prediction model (Random Forest) | **ROC-AUC 0.7902**, Recall **68.18%** at threshold 0.20 |
 
+📄 Completion is verified by [`british airways certification.pdf`](./british%20airways%20certification.pdf) — the official Forage job simulation certificate.
+
 ---
 
 ## ⚙️ Requirements
@@ -68,27 +70,33 @@ seaborn
 ## 🗂️ Project Structure
 
 ```
-BA-Data-Science-Job-Simulation/
-├── Task1_Lounge_Eligibility/
-│   ├── Lounge_Eligibility_Lookup_Template.xlsx
-│   └── flight_data.csv                          # Summer Schedule dataset (Forage-provided)
-├── Task2_Predicting_Customer_Buying_Behaviour/
+British-Airways-Data-Science-Job-Simulation/
+├── BA_task1_loungeEligibility/
+│   ├── British Airways Summer Schedule Dataset.csv
+│   ├── Lounge Eligibility Lookup Template - Task 1.xlsx
+│   └── README.md
+├── BA task-2 predicting customer buying behaviour/
 │   ├── BA_Task2_PredictingCustomerBuyingBehaviour.ipynb
-│   └── customer_booking.csv                      # Forage-provided booking dataset
-└── results/                                       # exported charts (see Visualization)
+│   ├── BA_Task2_PredictingCustomerBuyingBehaviour.pdf
+│   ├── customer_booking.csv
+│   └── readme.md
+├── british airways certification.pdf
+└── README.md                          # this file — top-level project overview
 ```
+
+> This README is the **top-level overview** tying both tasks together. Each task folder also has its own `README.md`/`readme.md` with task-specific detail.
 
 ---
 
 ## 📊 Data
 
 **Task 1 — Flight Schedule Dataset**
-- Source: British Airways Summer Schedule dataset (Forage-provided), **10,000 flights**
+- File: `British Airways Summer Schedule Dataset.csv` (Forage-provided), **10,000 flights**
 - Fields used: haul type (long/short), time of day, `TIER1_ELIGIBLE_PAX`, `TIER2_ELIGIBLE_PAX`, `TIER3_ELIGIBLE_PAX`, total seat capacity
 - Tier percentages = total eligible passengers ÷ total seat capacity, per group
 
 **Task 2 — Customer Booking Dataset**
-- Source: `customer_booking.csv` (Forage-provided), **50,000 rows, 14 original columns**
+- File: `customer_booking.csv` (Forage-provided), **50,000 rows, 14 original columns**
 - Target: `booking_complete` (binary) — **15.0% positive class** (imbalanced)
 - No missing values in any column
 - High-cardinality categoricals: `route` (799 unique values), `booking_origin` (104 unique values)
@@ -106,7 +114,7 @@ cd <your-repo-folder>
 pip install -q pandas numpy category_encoders scikit-learn matplotlib seaborn
 
 # 3. Open Task 1 in Excel/Sheets, or Task 2 in Jupyter/Colab
-jupyter notebook Task2_Predicting_Customer_Buying_Behaviour/BA_Task2_PredictingCustomerBuyingBehaviour.ipynb
+jupyter notebook "BA task-2 predicting customer buying behaviour/BA_Task2_PredictingCustomerBuyingBehaviour.ipynb"
 ```
 
 ---
@@ -194,5 +202,5 @@ Generated during the Task 2 notebook run:
 ---
 
 <div align="center">
-Completed as part of the British Airways Data Science Job Simulation on Forage
+Completed as part of the British Airways Data Science Job Simulation on Forage · Author: Ankit Kumar Jha
 </div>
