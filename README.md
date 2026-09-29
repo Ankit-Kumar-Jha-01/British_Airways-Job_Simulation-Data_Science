@@ -191,16 +191,6 @@ jupyter notebook "BA task-2 predicting customer buying behaviour/BA_Task2_Predic
 
 ---
 
-## 🎓 Certification
-
-<div align="center">
-<img src="british airways certification.png" alt="British Airways Data Science Job Simulation — Certificate of Completion" width="600"/>
-
-📄 [`british_airways_certification.pdf`](./british_airways_certification.pdf) — Forage Certificate of Completion, issued August 19th, 2026
-</div>
-
----
-
 ## 🧰 Technology Used
 
 | Category | Tools |
